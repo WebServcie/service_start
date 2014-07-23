@@ -1,10 +1,14 @@
 package com.bling.service;
 
+import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 
 @WebService
 public interface IMyService {
-	public int sum(int a,int b);
+	@WebResult(name="sumResult")
+	public int sum(@WebParam(name="a")int a,@WebParam(name="b")int b);
 	
-	public int minus(int a,int b);
+	@WebResult(name="minusResult")
+	public int minus(@WebParam(name="a")int a,@WebParam(name="b")int b);
 }
