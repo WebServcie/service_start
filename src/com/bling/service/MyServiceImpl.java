@@ -20,4 +20,15 @@ public class MyServiceImpl implements IMyService {
 		return a-b;
 	}
 
+	@Override
+	public User login(String username, String password) {
+		// TODO Auto-generated method stub
+		System.out.println(username+" is logining");
+		User user = new User();
+		user.setId(1);
+		user.setUsername(username);
+		user.setPassword(password);
+		return user;
+	}
+
 }
